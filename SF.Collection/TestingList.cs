@@ -23,7 +23,9 @@ namespace SF.Collection
             for (int i = 0; i < 27; i++)
             {
                 var rnd = Random.Next(99);
+
                 var user = ListUser.Where(d => d.Age == rnd);
+
                 Console.WriteLine(user.First().Age);
 
                 Console.WriteLine(user.First().id);

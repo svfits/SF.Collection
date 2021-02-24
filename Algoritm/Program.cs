@@ -14,10 +14,14 @@ namespace Algoritm
 
             int[] someArray = new int[] { 1, 2, 4, 3, 8, 5, 7, 6, 9, 0 };
 
+            Random random = new Random();
+
             var lsArr = new List<int>();
-            for (int i = 0; i < 500; i++)
+            for (int i = 1; i < 500; i++)
             {
-                lsArr.Add(i);
+
+                lsArr.Add(random.Next(100));
+
             }
 
             //Testing testing = new Testing(someArray);

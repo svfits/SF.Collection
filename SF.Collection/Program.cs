@@ -1,5 +1,6 @@
 ﻿using BenchmarkDotNet.Running;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 
 namespace SF.Collection
@@ -15,11 +16,16 @@ namespace SF.Collection
 
             var listUser = new List<User>();
 
+            var sdfsdf = new List<Dictionary<int, User>>();
+
             for (int i = 0; i < 100; i++)
             {
                 listUser.Add(new User() { Age = i, Salary = i, UrlPhoto = "url" });
             }
-            Console.WriteLine(listUser[78]);
+
+            Console.WriteLine(listUser[78].Age);
+            Console.WriteLine(listUser[78].Salary);
+            Console.WriteLine(listUser[78].UrlPhoto);
 
             var listAll = new List<User>();
 
@@ -49,6 +55,16 @@ namespace SF.Collection
 
             TestingList testingList = new TestingList(listUser);
             testingList.TestFilter();
+
+
+
+            #endregion
+
+
+            #region sorted
+
+            var comp = new Comparer();
+            listAll.Sort(comp);
 
             #endregion
 

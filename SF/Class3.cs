@@ -7,7 +7,7 @@ namespace SF.UML
 {
     class Class3 : BaseClass
     {
-        public Class2 Class2;
+        private Class2 Class2;
 
         public Class3()
         {

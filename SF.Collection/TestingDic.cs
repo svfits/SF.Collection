@@ -22,7 +22,9 @@ namespace SF.Collection
             for (int i = 0; i < 27; i++)
             {
                 var rnd = Random.Next(100);
-                var user = dicUser.Where(d => d.Key == rnd);
+
+                var user = dicUser.Where(gdfg => gdfg.Key == rnd);
+
                 Console.WriteLine(user.First().Value.Age);
                 
                 Console.WriteLine(user.First().Value.id);
